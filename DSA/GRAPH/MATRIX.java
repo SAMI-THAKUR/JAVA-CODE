@@ -51,7 +51,7 @@ class M_Graph{
         }
         return neighbours;
     }
-
+    // ----------------- BFS ---------------------- //
     void bfsVisit(M_Node node) {
         LinkedList<M_Node> queue = new LinkedList<M_Node>();
         queue.add(node);
@@ -76,7 +76,7 @@ class M_Graph{
             }
         }
     }
-
+    // ----------------- DFS ---------------------- //
     void dfsVisit(M_Node node) {
         Stack<M_Node> stack = new Stack<>();
         stack.push(node);
@@ -102,12 +102,7 @@ class M_Graph{
             }
         }
     }
-
-    public void makeUnvisited(){
-        for (M_Node node : nodeList) {
-            node.visited=false;
-        }
-    }
+    // ----------------- Topological Sort ---------------------- //
     void topologicalVisit(M_Node node, Stack<M_Node> stack) {
         ArrayList<M_Node> neighbors = getNeighbors(node);
         for (M_Node neighbor : neighbors) {
@@ -129,6 +124,11 @@ class M_Graph{
 
         while (!stack.isEmpty()) {
             System.out.print(stack.pop().name + " ");
+        }
+    }
+    public void makeUnvisited(){
+        for (M_Node node : nodeList) {
+            node.visited=false;
         }
     }
 
