@@ -1,7 +1,6 @@
-package DSA.GRAPH.All_Source_Shortest_Path;
+package DSA.GRAPH.Minimum_Spanning_Tree;
 
 
-import javax.xml.xpath.XPath;
 import java.util.*;
 
 class DS_Node implements Comparable<DS_Node> {
@@ -155,7 +154,6 @@ class Prism{
     public void addUndirectedEdge(int i , int j , int w){
         DS_Node first = nodeList.get(i);
         DS_Node second = nodeList.get(j);
-        Undirected_Edge edge = new Undirected_Edge(first,second,w);
         first.neighbours.add(second);
         first.weightMap.put(second,w);
         second.neighbours.add(first);

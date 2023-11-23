@@ -56,7 +56,7 @@ class M_Graph{
         LinkedList<M_Node> queue = new LinkedList<M_Node>();
         queue.add(node);
         while(!queue.isEmpty()) {
-            M_Node currentNode = queue.remove(0);
+            M_Node currentNode = queue.remove();
             currentNode.visited = true;
             System.out.print(currentNode.name + " ");
             ArrayList<M_Node> neighbors = getNeighbors(currentNode);
