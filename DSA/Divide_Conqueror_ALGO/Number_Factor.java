@@ -2,6 +2,17 @@ package DSA.Divide_Conqueror_ALGO;
 
 import java.util.*;
 
+
+/*
+*  Number Factor Problem
+* Given N , count the number of ways to express N as sum of a bunch of values
+* for example N=5
+* values = {1,3,4}
+* output = 6
+* 1+1+1+1+1
+* 1+4 , 4+1
+* 1+1+3 , 1+3+1 , 3+1+1
+* */
 class N_Factor{
     int  [] values = new int[3];
     N_Factor(int [] values){
@@ -31,7 +42,7 @@ class N_Factor{
 
 public class Number_Factor {
     public static void main(String[] args) {
-        int [] values = {1,2,3,4};
+        int [] values = {1,3,4};
         N_Factor n_factor = new N_Factor(values);
         System.out.println(n_factor.ways(5));
     }

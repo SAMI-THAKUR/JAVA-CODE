@@ -1,5 +1,11 @@
 package DSA.GREEDY_ALGO;
 
+/*
+*   Coin Change Problem
+*   Given a value V, if we want to make change for V Rs, and we have infinite supply of each of
+*   the denominations in Indian currency,
+* */
+
 class Changes{
     int coins[] = {1,2,5,10,20,50,100,500,1000};
     int coin = 0;

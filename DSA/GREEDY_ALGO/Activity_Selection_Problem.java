@@ -6,6 +6,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+
+
+/*
+*   Activity Selection Problem
+*   Given N activities with their start and finish times.
+*   Select the maximum number of activities that can be performed by a single person,
+* */
 class Activity {
     int start;
     int end;
@@ -28,7 +35,7 @@ class Max_Activity {
                 return o1.end - o2.end;
             }
         };
-        Collections.sort(activities,cmp);
+        Collections.sort(activities,cmp); // sort by end time of activity in ArrayList
         int count = 0;
         int lastEnd = 0;
         for (Activity activity : activities) {
