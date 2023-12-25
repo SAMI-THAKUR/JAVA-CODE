@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+
+
 class Items{
     int weight ;
     int value ;
@@ -57,6 +59,9 @@ public class KnapSack_Problem {
         items.add(new Items(40,40));
         items.add(new Items(20,100));
         items.add(new Items(30,120));
+        for(Items item : items){
+            System.out.println("Weight : " + item.weight + " Value : " + item.value);
+        }
         Max_Value max_value = new Max_Value(items,50);
         max_value.max_value();
     }
