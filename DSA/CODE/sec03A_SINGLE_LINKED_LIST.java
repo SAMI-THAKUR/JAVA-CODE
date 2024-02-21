@@ -6,7 +6,6 @@ import java.util.Scanner;
 class NODE {
     int value;  //  --> DATA NODE
     NODE next;  // -->  REFERENCE NODE
-
      public NODE(int data) {
          this.value = data;   // adding data to data node
     }
